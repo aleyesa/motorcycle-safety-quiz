@@ -1,0 +1,49 @@
+<!--***HTML file is basically the same as pt 1 just added comments on idea of functionality in js file.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Motorcycle Safety Quiz</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
+  <!--Hard coding all data for template, then use javascript to minimize and create functionality.-->
+  <body class="center-content">
+    <header role="banner">
+      <h1>Motorcycle Safety Quiz</h1>
+      <img role="image" src="#" alt="Beautiful motorcycle road with motorcycle rider in first person view"/>
+    </header>
+    <main role="main">
+      <!--button to start quiz-->
+      <button class="beginBtn" role="button">Begin</button>
+      <section class="scoringSection hide">
+        <h2 class="score">Score: 0 / 10</h2>
+      </section>
+
+      <section role="region" class="quizSection hide">
+      <form id="quiz" action="/Motorcycle-Safety-Quiz" method="get">
+        <!--jQuery will manipulate data stored in javascript array and-->
+        <!--append it inside here.-->
+      </form>
+      </section>
+
+      <!--Feedback section for checking if answer was correct or not-->
+      <section role="region" class="feedbackSection box hide">
+        <p class="usersAnswer">You got it [Placeholder]</p>
+        <p class="correctAnswer">Correct answer is [PlaceHolder]</p>
+        <button role="button" class="proceedBtn">Proceed</button>
+      </section>
+      
+      <!--Final section for final score-->
+      <section role="region" class="finalSection hide">
+        <p>You got [Placeholder] out of [Placeholder] correct.</p>
+        <button role="button">Try again</button>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
