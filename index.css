@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+/*.center-content {*/
+/*  margin: 0 auto;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.text-left {*/
+/*  text-align: left;*/
+/*}*/
+
+.hide {
+  display: none;
+}
+
+.box {
+  position: fixed;
+  width: 400px;
+  border: 2px black solid;
+  text-align: center;
+}
