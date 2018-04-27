@@ -12,32 +12,31 @@
     crossorigin="anonymous"></script>
   </head>
   <!--Hard coding all data for template, then use javascript to minimize and create functionality.-->
-  <body class="center-content">
-    <header role="banner">
+  <body>
+    <header role="banner" class='heading'>
       <h1>Motorcycle Safety Quiz</h1>
       <img role="image" src="#" alt="Beautiful motorcycle road with motorcycle rider in first person view"/>
     </header>
     <main role="main">
       <!--button to start quiz-->
-      <button class="beginBtn" role="button">Begin</button>
-      <section class="scoringSection hide">
-        <h2 class="score">Score: 0 / 10</h2>
+      <section role="region" class="start">
+        <button class="beginBtn" role="button">Begin</button>
       </section>
-
+      <!--Scoring section-->
+      <section class="scoringSection border hide">
+        <h2 class="score">Score: [Placeholder]</h2>
+      </section>
+      <!--Quiz section-->
       <section role="region" class="quizSection hide">
-      <form id="quiz" action="/Motorcycle-Safety-Quiz" method="get">
         <!--jQuery will manipulate data stored in javascript array and-->
         <!--append it inside here.-->
-      </form>
       </section>
-
       <!--Feedback section for checking if answer was correct or not-->
-      <section role="region" class="feedbackSection box hide">
+      <section role="region" class="feedbackSection hide">
         <p class="usersAnswer">You got it [Placeholder]</p>
         <p class="correctAnswer">Correct answer is [PlaceHolder]</p>
         <button role="button" class="proceedBtn">Proceed</button>
       </section>
-      
       <!--Final section for final score-->
       <section role="region" class="finalSection hide">
       </section>
