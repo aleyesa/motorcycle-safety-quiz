@@ -1,22 +1,38 @@
 * {
   box-sizing: border-box;
 }
-/*.center-content {*/
-/*  margin: 0 auto;*/
-/*  text-align: center;*/
-/*}*/
-
-/*.text-left {*/
-/*  text-align: left;*/
-/*}*/
+body {
+  background-image: url("https://www.nps.gov/shen/planyourvisit/images/Skyline-Drive-late-Fall.jpg?maxwidth=1200&maxheight=1200&autorotate=false");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-height: 1000px;
+  margin: 0 20%;
+}
 
 .hide {
   display: none;
 }
 
-.box {
-  position: fixed;
-  width: 400px;
-  border: 2px black solid;
+.beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
+  margin: 10px;
+  padding: 5px;
+}
+
+.scoringSection {
+  text-align: right;
+}
+.heading, .start, .feedbackSection, .finalSection, .center {
   text-align: center;
 }
+
+.scoringSection, form, .feedbackSection, .finalSection {
+  border: 2px black solid;
+  background-color: white;
+  opacity: 0.9;
+  max-width: 750px;
+  padding: 0 5px;
+}
+
+
+
+  
