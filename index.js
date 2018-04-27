@@ -58,7 +58,7 @@ const questionsAnswers = [
   },
   //Question 5
   {
-    question: 'Q5: In what steps and correct order should you consider when making a turn.',
+    question: 'Q5: In what steps and correct order should you consider when making a turn?',
     a1: ['a) Slow, Look, Press, and Roll.(answer)', {correct: 'correct'}],
     a2: ['b)  Roll, Press, Look, Slow.', {correct: 'wrong'}],
     a3: ['c)  Look, Press, Slow, Roll.', {correct: 'wrong'}],
@@ -119,26 +119,29 @@ const unhideElement = function(selector){
 //function that adds a form to quizSection using questionsAnswers.
 const showQuestion = function(qIndex){
   unhideElement('.quizSection');
-  $('form').append(`<h2>${questionsAnswers[qIndex].question}</h2>
-  <div>
-    <input role="radio" type="radio" id="answer1" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a1[1].correct}" checked/>
-    <label for="answer1">${questionsAnswers[qIndex].a1[0]}</label>
-  </div>
-  <div>
-    <input role="radio" type="radio" id="answer2" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a2[1].correct}"/>
-    <label for="answer2">${questionsAnswers[qIndex].a2[0]}</label>
-  </div>
-  <div>
-    <input role="radio" type="radio" id="answer3" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a3[1].correct}"/>
-    <label for="answer3">${questionsAnswers[qIndex].a3[0]}</label>
-  </div>
-  <div>
-    <input role="radio" type="radio" id="answer4" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a4[1].correct}"/>
-    <label for="answer4">${questionsAnswers[qIndex].a4[0]}</label>
-  </div>
-  <div>
-    <input role="button" class="checkAnswerBtn" type="submit" value="Check Answer" />
-  </div>
+  $('.quizSection').append(`
+  <form id="quiz" action="/Motorcycle-Safety-Quiz" method="get">
+    <h2>${questionsAnswers[qIndex].question}</h2>
+    <div>
+      <input role="radio" type="radio" id="answer1" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a1[1].correct}" checked/>
+      <label for="answer1">${questionsAnswers[qIndex].a1[0]}</label>
+    </div>
+    <div>
+      <input role="radio" type="radio" id="answer2" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a2[1].correct}"/>
+      <label for="answer2">${questionsAnswers[qIndex].a2[0]}</label>
+    </div>
+    <div>
+      <input role="radio" type="radio" id="answer3" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a3[1].correct}"/>
+      <label for="answer3">${questionsAnswers[qIndex].a3[0]}</label>
+    </div>
+    <div>
+      <input role="radio" type="radio" id="answer4" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a4[1].correct}"/>
+      <label for="answer4">${questionsAnswers[qIndex].a4[0]}</label>
+    </div>
+    <div class="center">
+      <input role="button" class="checkAnswerBtn" type="submit" value="Check Answer" />
+    </div>
+  </form>
 `);
 };
 
@@ -150,6 +153,7 @@ const startQuiz = function() {
     unhideElement('.scoringSection');
     //show first question
     showQuestion(questionIndexCounter);
+    $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`);
     //Setting default value for default checked radio button
     userCorrect = questionsAnswers[questionIndexCounter].a1[1].correct;
     $('.usersAnswer').text(`You got it ${userCorrect}!`);
@@ -167,7 +171,7 @@ const checkAnswer = function() {
 
 //Show feedback section
 const getFeedback = function() {
-$('form').on('click', '.checkAnswerBtn', function(event) {
+$('.quizSection').on('click', '.checkAnswerBtn', function(event) {
   event.preventDefault(); //prevents submiting to server in our scenerio
   unhideElement('.feedbackSection');
   //iterate all elements that has class 'js-answer' to find the correct answer and modify the inner text
@@ -189,12 +193,12 @@ const updateFinalSection = function() {
   }else {
     $('.finalSection').append('<p>Nice try, might want to review a little more.</p>');
   }
-  $('.finalSection').append('<button role="button">Go back to start screen</button>');
+  $('.finalSection').append('<button role="button" class="finalBtn">Go back to start screen</button>');
 };
 
 //resets and goes to start section
 const returnToStartScreen = function() {
-  $('.finalSection').on('click', 'button', function(event){
+  $('.finalSection').on('click', '.finalBtn', function(event){
     hideElement('.finalSection');
     hideElement('.scoringSection');
     unhideElement('.beginBtn');
@@ -219,8 +223,8 @@ const proceedAndUpdate = function() {
       hideElement('.feedbackSection');
       //update score
       $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`);
-      //clears  quiz form
-      $('#quiz').empty();
+      //clears  everything within quizSection
+      $('.quizSection').empty();
       //increments index counter to use to get next question
       questionIndexCounter++;
       //if index counter reaches the final question we hide all sections and show final section,
@@ -237,6 +241,11 @@ const proceedAndUpdate = function() {
       }
   });
 };
+
+//CSS manipulation here
+const backgroundImages = [
+  'http://r.ddmcdn.com/s_f/DSC/uploads/2014/08/top-10-motorcycle-rides-9-needles-highway-625x450.jpg',
+  ];
 
 //main call function
 const updateQuiz = function() {
@@ -255,8 +264,8 @@ $(updateQuiz());
 
 
 
-//*current task: to get questionAnswers to display final page.
-//other tasks: css,media queries and make keyboard user friendly.
+
+//tasks:Refactoring, css,media queries
 
 
 
