@@ -111,7 +111,7 @@ const hideElement = function(selector){
   $(selector).addClass('hide');
 };
 
-//removes hide class from specefic selector.
+//removes hide class from specific selector.
 const unhideElement = function(selector){
     $(selector).removeClass('hide');
 };
@@ -147,7 +147,6 @@ const showQuestion = function(qIndex){
 
 //Start questions by using a click event on begin button
 const startQuiz = function() {
-  //Initialize counters
   $('.beginBtn').on('click', function(event) {
     hideElement('.beginBtn');
     unhideElement('.scoringSection');
@@ -209,7 +208,6 @@ const returnToStartScreen = function() {
   }
 )};
 
-
 //Gets updated score and either goes to next question or when all questions
 //are done we go to the final section.
 const proceedAndUpdate = function() {
@@ -258,56 +256,7 @@ const updateQuiz = function() {
 
 $(updateQuiz());
 
-
-
-
-
-
-
-
-//tasks:Refactoring, css,media queries
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//tasks:css,media queries
 //Future ideas:
 //randomize question evertime 'try again' button is clicked.
 
