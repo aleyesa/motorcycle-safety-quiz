@@ -2,25 +2,24 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("https://www.nps.gov/shen/planyourvisit/images/Skyline-Drive-late-Fall.jpg?maxwidth=1200&maxheight=1200&autorotate=false");
+  background-image: url("http://www.prorunners.es/wp-content/uploads/2016/05/long-road-in-the-forest.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  max-height: 1000px;
-  margin: 0 20%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  background-color: black;
 }
 
 .hide {
   display: none;
 }
 
-.beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
-  margin: 10px;
-  padding: 5px;
+.quizTitle {
+  border: 2px black solid;
+  background-color: white;
+  opacity:0.9;
 }
 
-.scoringSection {
-  text-align: right;
-}
 .heading, .start, .feedbackSection, .finalSection, .center {
   text-align: center;
 }
@@ -29,9 +28,38 @@ body {
   border: 2px black solid;
   background-color: white;
   opacity: 0.9;
-  max-width: 750px;
   padding: 0 5px;
+  width: auto;
+  margin: 0 10px;
 }
+.scoringSection {
+  text-align: right;
+}
+
+.beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 639px){
+  header img {
+    width: 150px;
+  }
+  body {
+    width: 480px;
+    height: 1000px;
+  }
+} 
+
+@media only screen and (min-width: 640px){
+  body {
+    width: 640px;
+    height: 1000px;
+  }
+}
+
+
+  
 
 
 
