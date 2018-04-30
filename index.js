@@ -10,27 +10,27 @@ const questionsAnswers = [
   {
     //Question 1
     question: 'Q1: What are the four preparations you should do when preparing to ride a motorcycle?',
-    a1: ['a)\n\
-    1. You fit the motorcycle.(answer)\n\
-    2. You inspect the motorcycle.\n\
-    3. You use proper protective riding gear.\n\
-    4. You have a good mental attitude with safety as your priority.', {correct: 'correct'}],
-    a2: ['b\n\
-    1. You look cool on a motorcycle.\n\
-    2. You inspect the motorcycle.\n\
-    3. You use proper protective riding gear.\n\
-    4. You have a good mental attitude with safety as your priority.', {correct: 'wrong'}],
-    a3: ['c)\n\
-    1. You fit the motorcycle.\n\
-    2. You think that your motorcycle was good yesterday,\n\
-    so you should be fine today without basic inspection.\n\
-    3. You use proper protective riding gear.\n\
-    4. You have a good mental attitude with safety as your priority.', {correct: 'wrong'}],
-    a4: ['d)\n\
-    1. You fit the motorcycle.\n\
-    2. You inspect the motorcycle.\n\
-    3. You use proper protective riding gear.\n\
-    4. If you have no fear go right ahead.', {correct: 'wrong'}],
+    a1: [`a) 
+    1. You fit the motorcycle.
+    2. You inspect the motorcycle.
+    3. You use proper protective riding gear.
+    4. You have a good mental attitude with safety as your priority.`, {correct: 'correct'}],
+    a2: [`b)
+    1. You look cool on a motorcycle.
+    2. You inspect the motorcycle.
+    3. You use proper protective riding gear.
+    4. You have a good mental attitude with safety as your priority.`, {correct: 'wrong'}],
+    a3: [`c)
+    1. You fit the motorcycle.
+    2. You think that your motorcycle was good yesterday,
+    so you should be fine today without basic inspection.
+    3. You use proper protective riding gear.
+    4. You have a good mental attitude with safety as your priority.`, {correct: 'wrong'}],
+    a4: [`d)
+    1. You fit the motorcycle.
+    2. You inspect the motorcycle.
+    3. You use proper protective riding gear.
+    4. If you have no fear go right ahead.`, {correct: 'wrong'}],
   },
   //Question 2
   {
@@ -38,12 +38,12 @@ const questionsAnswers = [
     a1: ['a) How cool it looks and the bigger the motorcycle, the better!', {correct: 'wrong'}],
     a2: ['b) If it catches everyones eyes and has a nice seat cushion.', {correct: 'wrong'}],
     a3: ['c) It should be a good price and look promising.', {correct: 'wrong'}],
-    a4: ['d) Seat height and overall motorcycle size.(answer)', {correct: 'correct'}]
+    a4: ['d) Seat height and overall motorcycle size.', {correct: 'correct'}]
   },
   //Question 3
   {
     question: 'Q3: A quick an easy method to remember the major parts to inspect your motorcycle everytime you ride is called?',
-    a1: ['a) T-CLOCS(answer)', {correct: 'correct'}],
+    a1: ['a) T-CLOCS', {correct: 'correct'}],
     a2: ['b) A-CLOCS', {correct: 'wrong'}],
     a3: ['c) C-CLOCS ', {correct: 'wrong'}],
     a4: ['d) R-CLOCS', {correct: 'wrong'}]
@@ -51,7 +51,7 @@ const questionsAnswers = [
   //Question 4
   {
     question: 'Q4: A procedure called FINE-C is used as an engine pre-start routine, what does it stand for?',
-    a1: ['a) Focus, Ignition, Neutral, Engine Cut-off Switch, Choke/Clutch(answer)', {correct: 'correct'}],
+    a1: ['a) Focus, Ignition, Neutral, Engine Cut-off Switch, Choke/Clutch', {correct: 'correct'}],
     a2: ['b) Fuel, Ignition, Neutral, Engine, Cut-off Switch, Choke/Clutch', {correct: 'wrong'}],
     a3: ['c) Fuel, Intuition, Neutral,  Engine, Cut-off Switch, Choke/Clutch', {correct: 'wrong'}],
     a4: ['d) Fuel, Ignition, Normal, Enginge, Cut-off Switch, Choke/Clutch', {correct: 'wrong'}]
@@ -59,7 +59,7 @@ const questionsAnswers = [
   //Question 5
   {
     question: 'Q5: In what steps and correct order should you consider when making a turn?',
-    a1: ['a) Slow, Look, Press, and Roll.(answer)', {correct: 'correct'}],
+    a1: ['a) Slow, Look, Press, and Roll.', {correct: 'correct'}],
     a2: ['b)  Roll, Press, Look, Slow.', {correct: 'wrong'}],
     a3: ['c)  Look, Press, Slow, Roll.', {correct: 'wrong'}],
     a4: ['d)  Roll, Look, Press, Slow.', {correct: 'wrong'}]
@@ -70,12 +70,12 @@ const questionsAnswers = [
     a1: ['a) 50%', {correct: 'wrong'}],
     a2: ['b) 40%', {correct: 'wrong'}],
     a3: ['c) 60%', {correct: 'wrong'}],
-    a4: ['d) 70%(answer)', {correct: 'correct'}]
+    a4: ['d) 70%', {correct: 'correct'}]
   },
   //Question 7
   {
     question: 'Q7: What are the proper protective gear you should wear?',
-    a1: ['a) Helmet, footwear, pants, jacket, and gloves.(answer)', {correct: 'correct'}],
+    a1: ['a) Helmet, footwear, pants, jacket, and gloves.', {correct: 'correct'}],
     a2: ['b) anything that makes you comfortable.', {correct: 'wrong'}],
     a3: ['c) Just a helmet and gloves should be fine.', {correct: 'wrong'}],
     a4: ['d) Just a helmet.', {correct: 'wrong'}]
@@ -86,7 +86,7 @@ const questionsAnswers = [
     a1: ['a) highways', {correct: 'wrong'}],
     a2: ['b) curves', {correct: 'wrong'}],
     a3: ['c) intersections', {correct: 'wrong'}],
-    a4: ['d) both b and c.(answer)', {correct: 'correct'}]
+    a4: ['d) both b and c.', {correct: 'correct'}]
   },
   //Question 9
   {
@@ -94,36 +94,26 @@ const questionsAnswers = [
     a1: ['a) 20min', {correct: 'wrong'}],
     a2: ['b) 30min', {correct: 'wrong'}],
     a3: ['c) 40min', {correct: 'wrong'}],
-    a4: ['d) The first few minutes.(answer)', {correct: 'correct'}]
+    a4: ['d) The first few minutes.', {correct: 'correct'}]
   },
   //Question 10
   {
     question: 'Q10: Where are the motorcyclists blind spots located?',
-    a1: ['a) Beside you and behind you.(answer)', {correct: 'correct'}],
+    a1: ['a) Beside you and behind you.', {correct: 'correct'}],
     a2: ['b) In front of you and beside you.', {correct: 'wrong'}],
     a3: ['c) Behind you.', {correct: 'wrong'}],
     a4: ['d) Beside you.', {correct: 'wrong'}]
   }
   ];
 
-//add hide class to a specific selector.
-const hideElement = function(selector){
-  $(selector).addClass('hide');
-};
-
-//removes hide class from specific selector.
-const unhideElement = function(selector){
-    $(selector).removeClass('hide');
-};
-
-//function that adds a form to quizSection using questionsAnswers.
+//function that adds a form to quizSection using questionsAnswers data.
 const showQuestion = function(qIndex){
-  unhideElement('.quizSection');
+  unhideElement('.quizSection'); //hide quiz section
   $('.quizSection').append(`
   <form id="quiz" action="/Motorcycle-Safety-Quiz" method="get">
     <h2>${questionsAnswers[qIndex].question}</h2>
     <div>
-      <input role="radio" type="radio" id="answer1" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a1[1].correct}" checked/>
+      <input role="radio" type="radio" id="answer1" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a1[1].correct}" required/>
       <label for="answer1">${questionsAnswers[qIndex].a1[0]}</label>
     </div>
     <div>
@@ -145,23 +135,45 @@ const showQuestion = function(qIndex){
 `);
 };
 
-//Start questions by using a click event on begin button
+//change section display property to none to a specific selector.
+const hideElement = function(selector){
+  $(selector).css('display', 'none');
+};
+
+//change elements display property to a specific selector
+const unhideElement = function(selector, dispValue = 'block'){
+    $(selector).css('display', dispValue);
+};
+
+//Displays a quote bubble of encouragement
+const showEncouragement = function(phrase){
+    $('.quoteBubble p').text(phrase);
+    unhideElement('.quoteBubble', 'inline');
+  };
+
+//hides all elements not related to start screen content and a button used to 
+//navigate to the next section.
 const startQuiz = function() {
+  //hides all sections other than start screen content
+  hideElement('.scoringSection');
+  hideElement('.quizSection');
+  hideElement('.feedbackSection');
+  hideElement('.finalSection');
+  //Start questions by using a click event on begin button
   $('.beginBtn').on('click', function(event) {
-    hideElement('.beginBtn');
-    unhideElement('.scoringSection');
+    showEncouragement('Good luck!');
+    hideElement('.startSection'); 
+    unhideElement('.scoringSection'); //displays default score section
     //show first question
     showQuestion(questionIndexCounter);
-    $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`);
-    //Setting default value for default checked radio button
-    userCorrect = questionsAnswers[questionIndexCounter].a1[1].correct;
-    $('.usersAnswer').text(`You got it ${userCorrect}!`);
+    $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`); //update score
   });
 };
 
 //check if user got correct answer for questions
 const checkAnswer = function() {
   $('.quizSection').on('click', '.js-answer', function(event) {
+    hideElement('.quoteBubble');
     hideElement('.feedbackSection');
     $('.usersAnswer').text(`You got it ${this.value}!`);
     userCorrect = this.value; //changes userCorrect value to use for updating score.
@@ -170,8 +182,8 @@ const checkAnswer = function() {
 
 //Show feedback section
 const getFeedback = function() {
-$('.quizSection').on('click', '.checkAnswerBtn', function(event) {
-  event.preventDefault(); //prevents submiting to server in our scenerio
+$('.quizSection').on('submit', function(event) {
+  event.preventDefault(); //prevents default form submission to server.
   unhideElement('.feedbackSection');
   //iterate all elements that has class 'js-answer' to find the correct answer and modify the inner text
   // of all elements with the class 'correctAnswer'.
@@ -192,30 +204,34 @@ const updateFinalSection = function() {
   }else {
     $('.finalSection').append('<p>Nice try, might want to review a little more.</p>');
   }
+  $('.finalSection').append('<img role="image" src="http://www.mysafetysign.com/img/lg/S/Be-Alert-Safety-Slogan-Sign-S-4107.gif" alt="Motorycle Slogan: Be Alert, Expect The Unexpected"/>');
   $('.finalSection').append('<button role="button" class="finalBtn">Go back to start screen</button>');
 };
 
 //resets and goes to start section
 const returnToStartScreen = function() {
   $('.finalSection').on('click', '.finalBtn', function(event){
+    hideElement('.quoteBubble');
     hideElement('.finalSection');
     hideElement('.scoringSection');
-    unhideElement('.beginBtn');
+    unhideElement('.startSection');
     questionIndexCounter = 0;
     scoreCounter = 0;
     $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`);
     $('.finalSection').empty();
-  }
-)};
+  });
+};
 
 //Gets updated score and either goes to next question or when all questions
 //are done we go to the final section.
 const proceedAndUpdate = function() {
-
   $('.proceedBtn').on('click', function(event) {
       //checks if user chose correct answer, if true increment score by 1.
       if(userCorrect === 'correct'){
+        showEncouragement('Keep it up!'); 
         scoreCounter++;
+      }else {
+        showEncouragement('No worries!');
       }
       //hides feedback section
       hideElement('.feedbackSection');
@@ -231,6 +247,7 @@ const proceedAndUpdate = function() {
         hideElement('.quizSection');
         // hideElement('.feedbackSection');
         unhideElement('.finalSection');
+        showEncouragement('Ride safe!');
         updateFinalSection();
       }else{
         showQuestion(questionIndexCounter);
@@ -239,11 +256,6 @@ const proceedAndUpdate = function() {
       }
   });
 };
-
-//CSS manipulation here
-const backgroundImages = [
-  'http://r.ddmcdn.com/s_f/DSC/uploads/2014/08/top-10-motorcycle-rides-9-needles-highway-625x450.jpg',
-  ];
 
 //main call function
 const updateQuiz = function() {
@@ -256,9 +268,11 @@ const updateQuiz = function() {
 
 $(updateQuiz());
 
-//tasks:css,media queries
 //Future ideas:
-//randomize question evertime 'try again' button is clicked.
+//randomize questionsAnswers
+//animations
+//universal function for adding questions Answers
+
 
 
 
