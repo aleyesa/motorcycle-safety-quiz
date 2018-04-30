@@ -1,66 +1,53 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  background-image: url("http://www.prorunners.es/wp-content/uploads/2016/05/long-road-in-the-forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
-  background-color: black;
-}
-
-.hide {
-  display: none;
-}
-
-.quizTitle {
-  border: 2px black solid;
-  background-color: white;
-  opacity:0.9;
-}
-
-.heading, .start, .feedbackSection, .finalSection, .center {
-  text-align: center;
-}
-
-.scoringSection, form, .feedbackSection, .finalSection {
-  border: 2px black solid;
-  background-color: white;
-  opacity: 0.9;
-  padding: 0 5px;
-  width: auto;
-  margin: 0 10px;
-}
-.scoringSection {
-  text-align: right;
-}
-
-.beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
-  margin: 10px 0;
-  padding: 5px;
-}
-
-@media only screen and (max-width: 639px){
-  header img {
-    width: 150px;
-  }
-  body {
-    width: 480px;
-    height: 1000px;
-  }
-} 
-
-@media only screen and (min-width: 640px){
-  body {
-    width: 640px;
-    height: 1000px;
-  }
-}
-
-
-  
-
-
-
-  
+<!--Barebones structure, divided into 6 sections [header, startSection, scoringSection, quizSection, feedbackSection, finalSection -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width" 
+          description="Motorcyle themed quiz web application, images are not created by me. Created using html, css, javascript with jQuery library."
+          author="Aaron L"/>
+    <title>Motorcycle Safety Quiz</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
+  <!--Hard coding all data for template, then use javascript to minimize and create functionality.-->
+  <body>
+    <header role="banner" class='heading'>
+      <h1 class="quizTitle">Motorcycle Safety Quiz</h1>
+        <img role="image" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
+        <div class="quoteBubble">
+          <p>[Placeholder]</p>
+          <img role="image" src="http://www.clker.com/cliparts/u/b/n/W/2/m/speech-bubble-md.png" alt="Quote Bubble"/>
+        </div>
+    </header>
+    <main role="main">
+      <!--button to start quiz-->
+      <section role="region" class="startSection">
+        <button class="beginBtn" role="button">Begin</button>
+      </section>
+      <!--Scoring section-->
+      <section role="region" class="scoringSection">
+        <h2 class="score">Score: [Placeholder]</h2>
+      </section>
+      <!--Quiz section-->
+      <section role="region" class="quizSection">
+        <!--jQuery will manipulate data stored in javascript array and-->
+        <!--append it inside here.-->
+      </section>
+      <!--Feedback section for checking if answer was correct or not-->
+      <section role="region" class="feedbackSection">
+        <p class="usersAnswer">You got it [Placeholder]</p>
+        <p class="correctAnswer">Correct answer is [PlaceHolder]</p>
+        <button role="button" class="proceedBtn">Proceed</button>
+      </section>
+      <!--Final section for final score-->
+      <section role="region" class="finalSection">
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
