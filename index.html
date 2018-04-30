@@ -1,9 +1,12 @@
-<!--***HTML file is basically the same as pt 1 just added comments on idea of functionality in js file.-->
+<!--Barebones structure, divided into 6 sections [header, startSection, scoringSection, quizSection, feedbackSection, finalSection -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" 
+          content="width=device-width" 
+          description="Motorcyle themed quiz web application, images are not created by me. Created using html, css, javascript with jQuery library."
+          author="Aaron L"/>
     <title>Motorcycle Safety Quiz</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
@@ -15,30 +18,34 @@
   <body>
     <header role="banner" class='heading'>
       <h1 class="quizTitle">Motorcycle Safety Quiz</h1>
-      <img role="image" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
+        <img role="image" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
+        <div class="quoteBubble">
+          <p>[Placeholder]</p>
+          <img role="image" src="http://www.clker.com/cliparts/u/b/n/W/2/m/speech-bubble-md.png" alt="Quote Bubble"/>
+        </div>
     </header>
     <main role="main">
       <!--button to start quiz-->
-      <section role="region" class="start">
+      <section role="region" class="startSection">
         <button class="beginBtn" role="button">Begin</button>
       </section>
       <!--Scoring section-->
-      <section class="scoringSection border hide">
+      <section role="region" class="scoringSection">
         <h2 class="score">Score: [Placeholder]</h2>
       </section>
       <!--Quiz section-->
-      <section role="region" class="quizSection hide">
+      <section role="region" class="quizSection">
         <!--jQuery will manipulate data stored in javascript array and-->
         <!--append it inside here.-->
       </section>
       <!--Feedback section for checking if answer was correct or not-->
-      <section role="region" class="feedbackSection hide">
+      <section role="region" class="feedbackSection">
         <p class="usersAnswer">You got it [Placeholder]</p>
         <p class="correctAnswer">Correct answer is [PlaceHolder]</p>
         <button role="button" class="proceedBtn">Proceed</button>
       </section>
       <!--Final section for final score-->
-      <section role="region" class="finalSection hide">
+      <section role="region" class="finalSection">
       </section>
     </main>
     <script src="index.js"></script>
