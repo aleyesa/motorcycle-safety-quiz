@@ -1,52 +1,167 @@
-<!--Barebones structure, divided into 6 sections [header, startSection, scoringSection, quizSection, feedbackSection, finalSection -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1"
-          description="Motorcyle themed quiz web application, images are not created by me. Created using html, css, javascript with jQuery library."
-          author="Aaron L"/>
-    <title>Motorcycle Safety Quiz</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  </head>
-  <!--Hard coding all data for template, then use javascript to minimize and create functionality.-->
-  <body>
-    <header role="banner" class="heading">
-        <h1 class="quizTitle">Motorcycle Safety Quiz</h1>
-        <img role="image" class="motorcyclist" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
-      <aside class="quoteBubble">
-        <p class=>Good luck!</p>
-      </aside>
-    </header>
-    <main role="main">
-      <!--button to start quiz-->
-      <section role="region" class="startSection">
-        <button class="beginBtn" role="button">Begin</button>
-      </section>
-      <!--Scoring section-->
-      <section role="region" class="scoringSection">
-        <h2 class="score">Score: 0 / 10</h2>
-      </section>
-      <!--Quiz section-->
-      <section role="region" class="quizSection">
-        <!--jQuery will manipulate data stored in javascript array and-->
-        <!--append it inside here.-->
-      </section>
-      <!--Feedback section for checking if answer was correct or not-->
-      <section role="region" class="feedbackSection">
-        <p class="usersAnswer">You got it [Placeholder]</p>
-        <p class="correctAnswer">Correct answer is [PlaceHolder]</p>
-        <button role="button" class="proceedBtn">Proceed</button>
-      </section>
-      <!--Final section for final score-->
-      <section role="region" class="finalSection">
-      </section>
-    </main>
-    <script src="index.js"></script>
-  </body>
-</html>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background: url("http://www.prorunners.es/wp-content/uploads/2016/05/long-road-in-the-forest.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Horizontal align section content*/
+.heading, .startSection, .feedbackSection, .finalSection, .answerBtnSection {
+  text-align: center;
+}
+
+.quizTitle {
+  border-radius: 10px;
+}
+
+.motorcyclist {
+  max-width: 200px;
+  margin: 10px;
+}
+
+.quoteBubble {
+  margin-left: -40px;
+  margin-right: 5px;
+  display: none;/*use jquery to change display property to inline for proper formatting*/
+  position: absolute;
+  padding: 5px;
+  border: 2px black solid;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 25px;
+  margin-top: 10px;
+  opacity: 0.9;
+  background-color: white;
+} 
+
+.quizTitle, .scoringSection, .quizSection, .feedbackSection, .finalSection {
+  border: 2px black solid;
+  background-color: white;
+  opacity: 0.9;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/*hides all sections other than start screen content, then use jquery to unhide when needed*/
+.scoringSection, .quizSection, .feedbackSection, .finalSection {
+  display: none;
+}
+
+.quizTitle, .scoringSection{
+  padding: 5px;
+}
+
+.score {
+  margin: 0 10px;   
+}
+
+.quizSection{
+  padding-top: 25px;
+}
+
+.question, .answerSection {
+  margin-bottom: 10px;
+}
+
+.quizSection, .feedbackSection, .finalSection {
+  padding-bottom: 25px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.scoringSection {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.quiz-form fieldset {
+  border: none;
+}
+
+.question, .usersAnswer, .correctAnswer, .impression, .beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.answerSection {
+  margin-left: 30px;
+}
+
+label[for^="answer"]:hover {
+  background-color: yellow;
+}
+
+.checkAnswerBtn {
+  margin-top: 10px;
+}
+
+.beginBtn, .checkAnswerBtn, .proceedBtn, .finalBtn {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.finalSection img {
+  margin: 0 auto;
+  padding-bottom: 15px;
+  display: block;
+}
+
+/*Media Queries Section*/
+/*aligns score, changes size of motorcyclist icon and final section img according to specific screen sizes.*/
+@media only screen and (max-width: 320px) {
+  .scoringSection {
+    text-align: center;
+  }
+  .motorcyclist {
+    width: 50%;
+  }
+  .finalSection img {
+    max-width: 60%;
+  } 
+}
+
+input[type="radio"]:focus, button:focus, input[type="submit"]:focus {
+  background-color: lightgrey;
+}
+
+@media only screen and (min-width: 320px) {
+  .scoringSection {
+    text-align: center;
+  }
+  .motorcyclist {
+    width: 75%;
+  }
+  .finalSection img {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .scoringSection {
+    text-align: right;
+  }
+  .motorcyclist {
+    width: 100%;
+  }
+  .finalSection img {
+    max-width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+  
