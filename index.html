@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" 
-          content="width=device-width" 
+          content="width=device-width, initial-scale=1"
           description="Motorcyle themed quiz web application, images are not created by me. Created using html, css, javascript with jQuery library."
           author="Aaron L"/>
     <title>Motorcycle Safety Quiz</title>
@@ -16,13 +16,12 @@
   </head>
   <!--Hard coding all data for template, then use javascript to minimize and create functionality.-->
   <body>
-    <header role="banner" class='heading'>
-      <h1 class="quizTitle">Motorcycle Safety Quiz</h1>
-        <img role="image" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
-        <div class="quoteBubble">
-          <p>[Placeholder]</p>
-          <img role="image" src="http://www.clker.com/cliparts/u/b/n/W/2/m/speech-bubble-md.png" alt="Quote Bubble"/>
-        </div>
+    <header role="banner" class="heading">
+        <h1 class="quizTitle">Motorcycle Safety Quiz</h1>
+        <img role="image" class="motorcyclist" src="http://downloadicons.net/sites/default/files/motorcycle-icon-53568.png" alt="Motorcyclist"/>
+      <aside class="quoteBubble">
+        <p class=>Good luck!</p>
+      </aside>
     </header>
     <main role="main">
       <!--button to start quiz-->
@@ -31,7 +30,7 @@
       </section>
       <!--Scoring section-->
       <section role="region" class="scoringSection">
-        <h2 class="score">Score: [Placeholder]</h2>
+        <h2 class="score">Score: 0 / 10</h2>
       </section>
       <!--Quiz section-->
       <section role="region" class="quizSection">
