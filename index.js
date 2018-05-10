@@ -95,25 +95,25 @@ const showQuestion = function(qIndex){
   <form class="quiz-form" action="/Motorcycle-Safety-Quiz" method="get">
     <fieldset name="qA">
       <legend class="question">${questionsAnswers[qIndex].question}</legend>
-      <section role="region" class="answerSection">
+      <div class="answerSection">
         <input role="radio" type="radio" id="answer1" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a1[1].correct}" required autofocus/>
         <label for="answer1">${questionsAnswers[qIndex].a1[0]}</label>
-      </section>
-      <section role="region" class="answerSection">
+      </div>
+      <div class="answerSection">
         <input role="radio" type="radio" id="answer2" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a2[1].correct}"/>
         <label for="answer2">${questionsAnswers[qIndex].a2[0]}</label>
-      </section>
-      <section role="region" class="answerSection">
+      </div>
+      <div class="answerSection">
         <input role="radio" type="radio" id="answer3" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a3[1].correct}"/>
         <label for="answer3">${questionsAnswers[qIndex].a3[0]}</label>
-      </section>
-      <section role="region" class="answerSection">
+      </div>
+      <div class="answerSection">
         <input role="radio" type="radio" id="answer4" class="js-answer" name="answers" value="${questionsAnswers[qIndex].a4[1].correct}"/>
         <label for="answer4">${questionsAnswers[qIndex].a4[0]}</label>
-      </section>
-      <section role="region" class="answerBtnSection">
+      </div>
+      <div class="answerBtnSection">
         <input role="button" class="checkAnswerBtn" type="submit" value="Check Answer"/>
-      </section>
+      </div>
     </fieldset>
   </form>
 `);
