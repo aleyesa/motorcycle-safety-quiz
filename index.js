@@ -89,7 +89,7 @@ const questionsAnswers = [
   ];
 
 //function that creates a form to display question and its available answers using 'questionAnswers' data.
-const showQuestion = function(qIndex){
+function showQuestion(qIndex){
   unhideElement('.quizSection'); //show quiz section
   $('.quizSection').append(`
   <form class="quiz-form" action="/Motorcycle-Safety-Quiz" method="get">
@@ -117,28 +117,28 @@ const showQuestion = function(qIndex){
     </fieldset>
   </form>
 `);
-};
+}
 
 //change section display property to none to a specific selector.
-const hideElement = function(selector){
+function hideElement(selector){
   $(selector).css('display', 'none');
-};
+}
 
 //change elements display property to a specific selector
-const unhideElement = function(selector, dispValue = 'block'){
+function unhideElement(selector, dispValue = 'block'){
     $(selector).css('display', dispValue);
-};
+}
 
 //Displays a quote bubble of encouragement for a limited time
-const showEncouragement = function(phrase, timeIn = 400){
+function showEncouragement(phrase, timeIn = 400){
     $('.quoteBubble p').text(phrase);
     unhideElement('.quoteBubble', 'inline');
     $('.quoteBubble').fadeIn(timeIn);
-  };
+  }
 
 //Show start screen content, when user clicks on begin button, we show the score and quiz form, and a word of
 //encouragement!
-const startQuiz = function() {
+function startQuiz() {
   //Start questions by using a click event on begin button
   $('.beginBtn').on('click', function(event) {
     showEncouragement('Good luck!');
@@ -149,19 +149,19 @@ const startQuiz = function() {
     showQuestion(questionIndexCounter);
     $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`); //update score
   });
-};
+}
 
 //check if user got correct answer for questions
-const checkAnswer = function() {
+function checkAnswer() {
   $('.quizSection').on('click', '.js-answer', function(event) {
     hideElement('.feedbackSection');
     $('.usersAnswer').text(`You got it ${this.value}!`);
     userCorrect = this.value; //changes userCorrect value to use for updating score.
   });
-};
+}
 
 //Show feedback section
-const getFeedback = function() {
+function getFeedback() {
 $('.quizSection').on('submit', function(event) {
   event.preventDefault(); //prevents default form submission to server.
   hideElement('.quizSection');
@@ -180,10 +180,10 @@ $('.quizSection').on('submit', function(event) {
     showEncouragement('No worries!');
   }
 });
-};
+}
 
 //adds specific text to final section based on users total correct answers
-const updateFinalSection = function() {
+function updateFinalSection() {
   if(scoreCounter === questionsAnswers.length) {
     $('.finalSection').append('<p class="impression">You know your stuff!</p>');
   }else if(scoreCounter > 6){
@@ -194,10 +194,10 @@ const updateFinalSection = function() {
   $('.finalSection').append(`
       <img role="image" src="http://www.mysafetysign.com/img/lg/S/Be-Alert-Safety-Slogan-Sign-S-4107.gif" alt="Motorycle Slogan: Be Alert, Expect The Unexpected"/>
       <button role="button" class="finalBtn">Go back to start screen</button>`);
-};
+}
 
 //resets and goes to start section
-const returnToStartScreen = function() {
+function returnToStartScreen() {
   $('.finalSection').on('click', '.finalBtn', function(event){
     hideElement('.quoteBubble');
     hideElement('.finalSection');
@@ -208,11 +208,11 @@ const returnToStartScreen = function() {
     $('.score').text(`Score: ${scoreCounter} / ${questionsAnswers.length}`);
     $('.finalSection').empty();
   });
-};
+}
 
 //Gets updated score and either goes to next question or when all questions
 //are done we go to the final section.
-const proceedAndUpdate = function() {
+function proceedAndUpdate() {
   $('.proceedBtn').on('click', function(event) {
       //checks if user chose correct answer, if true increment score by 1.
       if(userCorrect === 'correct'){
@@ -240,16 +240,16 @@ const proceedAndUpdate = function() {
         $('.usersAnswer').text(`You got it ${questionsAnswers[questionIndexCounter].a1[1].correct}!`);
       }
   });
-};
+}
 
 //main call function
-const updateQuiz = function() {
+function updateQuiz() {
   startQuiz();
   checkAnswer();
   getFeedback();
   proceedAndUpdate();
   returnToStartScreen();
-};
+}
 
 $(updateQuiz());
 
