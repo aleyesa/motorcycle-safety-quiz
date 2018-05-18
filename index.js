@@ -192,7 +192,7 @@ function updateFinalSection() {
     $('.finalSection').append('<p class="impression">Nice try, might want to review a little more.</p>');
   }
   $('.finalSection').append(`
-      <img role="image" src="http://www.mysafetysign.com/img/lg/S/Be-Alert-Safety-Slogan-Sign-S-4107.gif" alt="Motorycle Slogan: Be Alert, Expect The Unexpected"/>
+      <img src="http://www.mysafetysign.com/img/lg/S/Be-Alert-Safety-Slogan-Sign-S-4107.gif" alt="Motorycle Slogan: Be Alert, Expect The Unexpected"/>
       <button role="button" class="finalBtn">Go back to start screen</button>`);
 }
 
